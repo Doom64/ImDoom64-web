@@ -1,0 +1,40 @@
+.card-deck.text-center
+  .card
+    .card-header
+      %i.fab.fa-windows.fa-fw
+      %strong Windows
+
+    .card-body
+
+      %p.card-text Latest successful build. Untested.
+
+    .card-footer
+      %a.btn.btn-primary.btn-block{ href: 'https://ci.appveyor.com/project/dotfloat/imdoom64/build/artifacts' }
+        %i.fas.fa-download.fa-fw
+        Download (x86)
+
+  .card.text-muted.bg-muted
+    .card-header
+      %i.fab.fa-linux.fa-fw
+      %strong Linux
+
+    .card-body
+      %p.card-text No automated builds are currently available for Linux-based distributions.
+
+    .card-footer
+      %a.btn.btn-primary.disabled.btn-block{ href: '#' }
+        %i.fas.fa-download.fa-fw
+        Download
+
+  .card.text-muted.bg-muted
+    .card-header
+      %i.fab.fa-apple.fa-fw
+      %strong macOS
+
+    .card-body
+      %p.card-text No automated builds are currently available for macOS.
+
+    .card-footer
+      %a.btn.btn-primary.disabled.btn-block{ href: '#' }
+        %i.fas.fa-download.fa-fw
+        Download
