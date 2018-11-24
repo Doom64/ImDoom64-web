@@ -1,6 +1,18 @@
+.page-header
+  %h2.page-title Latest Commits
+
 %table.table
   %thead
     %tr
       %th Commit
       %th Windows (x86)
-      %th Appveyor log
+  %tbody
+    - @commits.each do |commit|
+      %td
+        %a{ href: commit.permalink }= commit.summary
+      %td
+        - win32 = commit.artifacts.find_by_build_type(:win32)
+        - if win32
+          %a{ href: win32.permalink } Download
+        - else
+          N/A
